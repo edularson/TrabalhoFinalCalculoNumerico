@@ -44,7 +44,11 @@ def main():
         coeficientesMatriz.append(row)
         constanteMatriz.append(input_float(f'Insira o elemento b[{i+1}]: '))
 
-    aproximacao = [0.0] * level
+    # Solicitar ao usuário os valores iniciais de aproximação
+    aproximacao = []
+    for i in range(level):
+        aproximacao.append(input_float(f'Insira o valor inicial de aproximação x[{i+1}]: '))
+
     tolerancia = input_float('Insira a tolerância: ')
     maxIteracoes = input_int('Insira o número máximo de iterações: ')
 
